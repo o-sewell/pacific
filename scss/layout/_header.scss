@@ -1,6 +1,5 @@
 .banner {
   width: 100%;
-  height: 20vh;
   background-image:
           linear-gradient(
                         rgba(0, 0, 0, 0.5),
@@ -38,7 +37,7 @@ header {
   &__item {
     a {
       display: block;
-      color: #797e83;
+      color: white;
       font-size: 1.125em;
       font-weight: 300;
       text-align: center;
@@ -46,19 +45,22 @@ header {
       border-bottom: 1px solid #ebecec;
 
       &:hover {
-         color: #0b0b0b;
+         color: $blue;
          border-bottom-color: #52bab3;
       }
     }
   }
 }
-
+ .banner-container {
+   visibility: hidden;
+ }
 /* ---------------------------------
    Media Queries
 ----------------------------------*/
 @media (min-width: 769px) {
 
   .banner {
+    display: block;
     height: 80vh;
     position: relative;
 
@@ -74,7 +76,7 @@ header {
 
     &__text {
       font-size: 2em;
-      color: $white;
+      color: white;
     }
   }
 
@@ -93,13 +95,22 @@ header {
     justify-content: space-between;
 
     a {
-      color: $white;
       border-bottom-color: transparent;
+
+      &:hover {
+        color: #0b0b0b;
+      }
     }
   }
 
+.banner-container {
+  visibility: visible;
+}
 }
 
+.intro-contain {
+  display: block;
+}
 .button {
   display: block;
   position: absolute;
