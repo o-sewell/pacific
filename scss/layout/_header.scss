@@ -100,6 +100,34 @@ header {
 
 }
 
+.button {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 20px 35px;
+  background: $blue;
+  width: 200px;
+  border-radius: 3px;
+  color: $white;
+  cursor: pointer;
+  font-family: $font-family--primary;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.learn-more {
+  margin-left: 120px;
+}
+
+.contact {
+  margin-left: -120px;
+}
+
 @media (min-width: 1025px) {
   header {
     flex-direction: row;
