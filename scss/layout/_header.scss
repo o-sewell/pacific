@@ -1,3 +1,19 @@
+.banner {
+  width: 100%;
+  height: 20vh;
+  background-image:
+          linear-gradient(
+                        rgba(0, 0, 0, 0.5),
+                        rgba(0, 0, 0, 0.5)
+          ),
+          url(../images/sea.jpg);
+  background-size: cover;
+
+  &__intro {
+    display: none;
+  }
+}
+
 header,
 .nav {
   display: flex;
@@ -11,6 +27,9 @@ header {
 .site-logo {
   width: 110px;
   align-self: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  color: $blue;
 }
 
 .nav {
@@ -38,6 +57,27 @@ header {
    Media Queries
 ----------------------------------*/
 @media (min-width: 769px) {
+
+  .banner {
+    height: 80vh;
+    position: relative;
+
+    &__intro {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      width: 100%;
+      text-align: center;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    &__text {
+      font-size: 2em;
+      color: $white;
+    }
+  }
+
   header {
     height: 200px;
     justify-content: flex-end;
@@ -53,8 +93,32 @@ header {
     justify-content: space-between;
 
     a {
+      color: $white;
       border-bottom-color: transparent;
     }
+  }
+
+}
+
+@media (min-width: 1025px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav {
+    margin-top: 0;
+    align-self: center;
+    margin-right: 2em;
+
+    &__item {
+      margin-left: .65em;
+      margin-right: .65em;
+    }
+  }
+
+  .site-logo {
+    margin-left: 2em;
   }
 
 }
