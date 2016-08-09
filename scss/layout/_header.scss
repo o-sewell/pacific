@@ -33,3 +33,28 @@ header {
     }
   }
 }
+
+/* ---------------------------------
+   Media Queries
+----------------------------------*/
+@media (min-width: 769px) {
+  header {
+    height: 200px;
+    justify-content: flex-end;
+  }
+
+  .site-logo {
+    width: 140px;
+  }
+
+  .nav {
+    margin-top: 3em;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+      border-bottom-color: transparent;
+    }
+  }
+
+}
